@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/weather-app.png">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input id="inputbox" type="text" placeholder="Enter city name" spellcheck="false">
+            <button><img src="images/search-icon.png" alt="Search"></button>
+        </div>
+        <div class="weather" style="display: none;">
+            <img src="" class="weather-icon" alt="Weather Icon">
+            <h1 class="temp"></h1>
+            <h2 class="city"></h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="Humidity">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="Wind Speed">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async defer></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2BdMQoPTZGZOsuW_QOcQ8QYjl6wAcCqM&libraries=places" async defer></script>
+    <script src="script.js" async defer></script>
+</body>
+</html>
