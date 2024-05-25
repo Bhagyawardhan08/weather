@@ -1,10 +1,11 @@
 const apiKey = "a17d4899a3efd41e053857d558efc10f";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const searchBox = document.querySelector("#inputbox");
-const searchBtn = document.querySelector(".search button");
+const searchBtn = document.querySelector("#searchBtn");
 const weather_icon = document.querySelector(".weather-icon");
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Initialize the Google Maps Places Autocomplete
     const autocomplete = new google.maps.places.Autocomplete(searchBox, {
         types: ['(cities)']
     });
@@ -51,8 +52,8 @@ function updateWeatherIcon(condition) {
         "rain": "images/raining.png",
         "mist": "images/mist.png",
         "drizzle": "images/drizzle.png",
-        
+        // Add more conditions as needed
     };
 
-    weather_icon.src = iconMapping[condition] || "images/default.png"; 
+    weather_icon.src = iconMapping[condition] || "images/default.png"; // Fallback to a default icon if condition is not mapped
 }
